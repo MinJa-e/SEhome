@@ -47,12 +47,44 @@
             display: block;
             /* inline 요소의 이상한 여백 제거 */
         }
+
+        .x-draw path {
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: drawX 1s ease-out forwards;
+        }
+
+        .dae-draw path {
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+            animation: drawDae 1s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes drawX {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes drawDae {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="testname1">
         <img src="images/cdjsgs.png">
+        <svg class="x-draw" viewBox="0 0 100 100">
+            <path d="M10,10 L90,90 M90,10 L10,90" stroke="blue" stroke-width="5" fill="none" />
+        </svg>
+        <svg class="dae-draw" viewBox="0 0 100 100">
+            <path d="M20,20 C40,10 60,10 80,20 S100,40 80,60 C60,70 40,70 20,60 S0,40 20,20 Z" stroke="blue"
+                stroke-width="5" fill="none" />
+        </svg>
     </div>
 </body>
 
