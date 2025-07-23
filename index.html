@@ -23,12 +23,34 @@
             display: block;
             /* 여백 제거 */
         }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.3;
+                transform: scale(1.1);
+            }
+        }
+
+        .twinkle-star {
+            animation: twinkle 1.5s infinite ease-in-out;
+        }
     </style>
 </head>
 
 <body>
     <div class="title-wrapper">
-        <img src="images/cdj_notstar.png" class="cdj">
+        <img src="images/star.png" class="twinkle-star" style="animation-delay: 0s;" />
+        <img src="images/star.png" class="twinkle-star" style="animation-delay: 0.3s;" />
+        <img src="images/star.png" class="twinkle-star" style="animation-delay: 0.6s;" />
+        <img src="images/star.png" class="twinkle-star" style="animation-delay: 0.9s;" />
+        <img src="images/star.png" class="twinkle-star" style="animation-delay: 1.2s;" />
     </div>
 </body>
 
