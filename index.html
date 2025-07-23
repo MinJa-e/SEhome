@@ -56,19 +56,16 @@
         .stroke-x {
             fill: none;
             stroke: blue;
-            stroke-width: 12;
+            stroke-width: 10;
             stroke-linecap: round;
             stroke-linejoin: round;
-
             stroke-dasharray: 1000;
-            /* 충분히 큰 값으로 설정 */
             stroke-dashoffset: 1000;
-
-            animation: draw-x 1.2s ease-out forwards;
+            animation: draw-x 1s ease-out forwards;
         }
 
         .stroke-x:nth-of-type(2) {
-            animation-delay: 0.7s;
+            animation-delay: 0.6s;
             /* 두 번째 선은 약간 나중에 */
         }
 
@@ -83,7 +80,7 @@
 <body>
     <div class="title-wrapper">
         <img src="images/cdjsgs.png" class="title-base">
-        <svg class="x-draw" viewBox="0 0 768 768">
+        <svg class="x-draw" viewBox="0 0 768 768" xmlns="http://www.w3.org/2000/svg">
             <polyline class="stroke-x" fill="none" stroke="blue" stroke-width="10"
                 points="120,600 240,480 360,360 480,240 600,120" />
             <polyline class="stroke-x" fill="none" stroke="blue" stroke-width="10"
