@@ -53,7 +53,26 @@
             z-index: 10;
         }
 
-        @keyframes drawX {
+        .stroke-x {
+            fill: none;
+            stroke: blue;
+            stroke-width: 12;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+
+            stroke-dasharray: 1000;
+            /* 충분히 큰 값으로 설정 */
+            stroke-dashoffset: 1000;
+
+            animation: draw-x 1.2s ease-out forwards;
+        }
+
+        .stroke-x:nth-of-type(2) {
+            animation-delay: 0.7s;
+            /* 두 번째 선은 약간 나중에 */
+        }
+
+        @keyframes draw-x {
             to {
                 stroke-dashoffset: 0;
             }
@@ -64,21 +83,11 @@
 <body>
     <div class="title-wrapper">
         <img src="images/cdjsgs.png" class="title-base">
-        <svg class="x-draw" viewBox="0 0 100 100">
-  <path
-    d="M15,20 
-       Q30,40 50,50 
-       Q70,60 85,80
-       M85,20 
-       Q60,40 50,50 
-       Q40,60 15,80"
-    stroke="blue"
-    stroke-width="5"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
+        <svg class="x-draw" viewBox="0 0 768 768">
+            <polyline points="..." class="stroke-x" />
+            <polyline points="..." class="stroke-x" />
         </svg>
+
     </div>
 </body>
 
