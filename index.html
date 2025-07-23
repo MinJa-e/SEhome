@@ -87,6 +87,20 @@
         <img src="images/star.png" class="star star-right2" alt="오른쪽 별">
         <img src="images/star.png" class="star star-right3" alt="오른쪽 별">
     </div>
+    
+  <audio id="bgm" autoplay loop>
+    <source src="audio/bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // 자동재생 제한 대응
+    window.addEventListener('click', () => {
+      const bgm = document.getElementById('bgm');
+      if (bgm.paused) {
+        bgm.play();
+      }
+    });
+  </script>
 </body>
 
 </html>
