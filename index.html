@@ -15,31 +15,32 @@
         }
         */
 
-        .title-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
+        .title-wrapper {
+            position: relative;
+            width: 100%;
         }
 
         .title-image {
+            width: 100%;
             height: auto;
-            width: 300px;
-            /* 너비는 적절히 조정 가능 */
+            display: block;
         }
 
         .star {
-            width: 30px;
-            height: auto;
+            position: absolute;
+            width: 40px;
             animation: twinkle 1.2s infinite ease-in-out;
         }
 
-        .twinkle-left {
+        .star-left {
+            top: 10%;
+            left: 15%;
             animation-delay: 0s;
         }
 
-        .twinkle-right {
+        .star-right {
+            top: 10%;
+            right: 15%;
             animation-delay: 0.6s;
         }
 
@@ -52,7 +53,7 @@
             }
 
             50% {
-                opacity: 0.4;
+                opacity: 0.3;
                 transform: scale(1.3);
             }
         }
@@ -60,11 +61,10 @@
 </head>
 
 <body>
-    <div class="title-container">
-
-        <img src="images/star.png" class="star twinkle-left" alt="별 왼쪽">
-        <img src="images/cdj_notstar.png" class="title-image" alt="초대장">
-        <img src="images/star.png" class="star twinkle-right" alt="별 오른쪽">
+    <div class="title-wrapper">
+        <img src="images/title-image.png" class="title-image" alt="초대장">
+        <img src="images/star.png" class="star star-left" alt="왼쪽 별">
+        <img src="images/star.png" class="star star-right" alt="오른쪽 별">
     </div>
 </body>
 
