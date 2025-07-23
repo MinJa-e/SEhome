@@ -1,7 +1,6 @@
 <html>
 
 <head>
-    <script src="https://unpkg.com/lottie-web@5.10.2/build/player/lottie.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -13,93 +12,13 @@
             /* 원본 사이즈 유지 */
             font-family: 'Nanum Pen Script', sans-serif;
         }
-
-        .container {
-            padding: 50px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3rem;
-            color: #333;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #444;
-        }
-
-        .title-wrapper {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-        }
-
-
-        .title-base {
-            display: block;
-            position: absolute;
-            width: 100%;
-            z-index: 1;
-        }
-
-        .x-draw {
-            stroke-dasharray: 200;
-            stroke-dashoffset: 200;
-            animation: drawX 1s ease-out forwards;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 40%;
-            z-index: 10;
-        }
-
-        .stroke-x {
-            fill: none;
-            stroke: blue;
-            stroke-width: 10;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: draw-x 1s ease-out forwards;
-        }
-
-        .stroke-x:nth-of-type(2) {
-            animation-delay: 0.6s;
-            /* 두 번째 선은 약간 나중에 */
-        }
-
-        @keyframes draw-x {
-            to {
-                stroke-dashoffset: 0;
-            }
-        }
     </style>
 </head>
 
 <body>
     <div class="title-wrapper">
-        <img src="images/cdjsgs.png" class="title-base">
-        <svg class="x-draw" viewBox="0 0 768 768" xmlns="http://www.w3.org/2000/svg">
-            <polyline class="stroke-x" fill="none" stroke="blue" stroke-width="10"
-                points="120,600 240,480 360,360 480,240 600,120" />
-            <polyline class="stroke-x" fill="none" stroke="blue" stroke-width="10"
-                points="600,600 480,480 360,360 240,240 120,120" />
-        </svg>
-
+        <img src="images/cdj.png">
     </div>
-    <div id="x-lottie" style="width: 400px; height: 400px;"></div>
-
-    <script>
-        lottie.loadAnimation({
-            container: document.getElementById('x-lottie'),
-            renderer: 'svg',
-            loop: false,
-            autoplay: true,
-            path: 'images/blue_x_stroke_lottie.json' // 이 JSON 파일 경로
-        });
-    </script>
 </body>
 
 </html>
