@@ -34,24 +34,20 @@
             display: relative;
         }
 
-        .title-wrapper img {
-            width: 30vw;
-            height: auto;
+
+        .title-base {
             display: block;
-            /* inline 요소의 이상한 여백 제거 */
+            width: 100%;
         }
 
         .x-draw path {
             stroke-dasharray: 200;
             stroke-dashoffset: 200;
             animation: drawX 1s ease-out forwards;
-        }
-
-        .dae-draw path {
-            stroke-dasharray: 300;
-            stroke-dashoffset: 300;
-            animation: drawDae 1s ease-out forwards;
-            animation-delay: 1s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
         }
 
         @keyframes drawX {
@@ -64,7 +60,7 @@
 
 <body>
     <div class="title-wrapper">
-        <img src="images/cdjsgs.png">
+        <img src="images/cdjsgs.png" class="" title-base">
         <svg class="x-draw" viewBox="0 0 100 100">
             <path d="M10,10 L90,90 M90,10 L10,90" stroke="blue" stroke-width="5" fill="none" />
         </svg>
