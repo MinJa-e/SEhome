@@ -1,36 +1,6 @@
 <html>
 
 <head>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script>
-        Kakao.init('dbba57ed28cc233d532efe9182a792b8'); // 발급받은 JS 키
-        console.log(Kakao.isInitialized()); // true 확인용
-    </script>
-    <script>
-        document.getElementById('kakao-share-btn').addEventListener('click', function () {
-            Kakao.Link.sendDefault({
-                objectType: 'feed',
-                content: {
-                    title: '초대장이 도착했어요!',
-                    description: '이 링크를 통해 멋진 초대장을 확인해보세요!',
-                    imageUrl: 'https://minja-e.github.io/SEhome/images/title-image.png',
-                    link: {
-                        mobileWebUrl: 'https://minja-e.github.io/SEhome/',
-                        webUrl: 'https://minja-e.github.io/SEhome/',
-                    },
-                },
-                buttons: [
-                    {
-                        title: '초대장 보기',
-                        link: {
-                            mobileWebUrl: 'https://minja-e.github.io/SEhome/',
-                            webUrl: 'https://minja-e.github.io/SEhome/',
-                        },
-                    },
-                ]
-            });
-        });
-    </script>
     <style>
         /*
         body {
@@ -164,9 +134,41 @@
         </details>
     </div>
 
-    <button id="kakao-share-btn">
-        카카오톡으로 공유하기
-    </button>
+    <!-- HTML 버튼 -->
+    <button id="kakao-share-btn">카카오톡 공유</button>
+
+    <!-- SDK 로드 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+    <script>
+        // ✅ 앱 키 설정
+        Kakao.init('여기에_카카오_JavaScript_키');
+
+        // ✅ 클릭 이벤트
+        document.getElementById('kakao-share-btn').addEventListener('click', function () {
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: '초대장이 도착했어요!',
+                    description: '👇 아래 링크로 확인해보세요!',
+                    imageUrl: 'https://minja-e.github.io/SEhome/images/title-image.png',
+                    link: {
+                        mobileWebUrl: 'https://minja-e.github.io/SEhome/',
+                        webUrl: 'https://minja-e.github.io/SEhome/'
+                    }
+                },
+                buttons: [
+                    {
+                        title: '초대장 보기',
+                        link: {
+                            mobileWebUrl: 'https://minja-e.github.io/SEhome/',
+                            webUrl: 'https://minja-e.github.io/SEhome/'
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 
 
 
