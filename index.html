@@ -28,20 +28,13 @@
             color: #444;
         }
 
-        .testname1 {
+        .title-wrapper {
             width: 100%;
             height: 100vh;
-            display: flex;
-            justify-content: center;
-            /* 수평 정렬 */
-            align-items: flex-start;
-            /* 수직 정렬 */
-            padding-top: 10vh;
-            /* 원하는 만큼 조절 */
-            box-sizing: border-box;
+            display: relative;
         }
 
-        .testname1 img {
+        .title-wrapper img {
             width: 30vw;
             height: auto;
             display: block;
@@ -70,7 +63,7 @@
 </head>
 
 <body>
-    <div class="testname1">
+    <div class="title-wrapper">
         <img src="images/cdjsgs.png">
         <svg class="x-draw" viewBox="0 0 100 100">
             <path d="M10,10 L90,90 M90,10 L10,90" stroke="blue" stroke-width="5" fill="none" />
