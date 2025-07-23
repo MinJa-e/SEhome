@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet" />
     <style>
         /*
         body {
@@ -84,6 +85,39 @@
         .yd {
             width: 100%;
         }
+
+        .kakao-share-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        #kakao-share-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #FEE500;
+            /* 카카오톡 노란색 */
+            color: #3C1E1E;
+            border: none;
+            border-radius: 40px;
+            padding: 14px 22px;
+            font-size: 16px;
+            font-family: 'Pretendard', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.15s ease-in-out;
+        }
+
+        #kakao-share-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .kakao-icon {
+            width: 24px;
+            height: 24px;
+        }
     </style>
 </head>
 
@@ -135,7 +169,12 @@
     </div>
 
     <!-- HTML 버튼 -->
-    <button id="kakao-share-btn">카카오톡 공유</button>
+    <div class="kakao-share-wrapper">
+        <button id="kakao-share-btn">
+            <img src="images/kakao-icon.svg" alt="카카오 아이콘" class="kakao-icon" />
+            카카오톡으로 초대장 공유하기
+        </button>
+    </div>
 
     <!-- SDK 로드 -->
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
