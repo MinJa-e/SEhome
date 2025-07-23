@@ -41,25 +41,25 @@
         .star-left2 {
             top: 13%;
             left: 18%;
-            animation-delay: 0.3s;
+            animation-delay: 0.4s;
         }
 
         .star-right1 {
             top: 9%;
             right: 21%;
-            animation-delay: 0s;
+            animation-delay: 0.4s;
         }
 
         .star-right2 {
             top: 15%;
             right: 24%;
-            animation-delay: 0.3s;
+            animation-delay: 0s;
         }
 
         .star-right3 {
             top: 16%;
             right: 14%;
-            animation-delay: 0s;
+            animation-delay: 0.4s;
         }
 
         @keyframes twinkle {
@@ -87,20 +87,25 @@
         <img src="images/star.png" class="star star-right2" alt="오른쪽 별">
         <img src="images/star.png" class="star star-right3" alt="오른쪽 별">
     </div>
-    
-  <audio id="bgm" autoplay loop>
-    <source src="audio/ponyo.mp3" type="audio/mpeg">
-  </audio>
+    <div>
+        <h1>오시는 길</h1>
+    </div>
 
-  <script>
-    // 자동재생 제한 대응
-    window.addEventListener('click', () => {
-      const bgm = document.getElementById('bgm');
-      if (bgm.paused) {
-        bgm.play();
-      }
-    });
-  </script>
+    <audio id="bgm" autoplay loop>
+        <source src="audio/ponyo.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // 자동재생 제한 대응
+        window.addEventListener('click', () => {
+            const bgm = document.getElementById('bgm');
+            if (bgm.paused) {
+                bgm.play();
+            }
+        });
+    </script>
+
+
 </body>
 
 </html>
