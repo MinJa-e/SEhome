@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <script src="https://unpkg.com/lottie-web@5.10.2/build/player/lottie.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -88,6 +89,17 @@
         </svg>
 
     </div>
+    <div id="x-lottie" style="width: 400px; height: 400px;"></div>
+
+    <script>
+        lottie.loadAnimation({
+            container: document.getElementById('x-lottie'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: 'images/blue_x_stroke_lottie.json' // 이 JSON 파일 경로
+        });
+    </script>
 </body>
 
 </html>
