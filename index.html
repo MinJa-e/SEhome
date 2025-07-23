@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css"
+        rel="stylesheet" />
     <style>
         /*
         body {
@@ -93,6 +94,7 @@
         }
 
         #kakao-share-btn {
+            width: 280px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -117,6 +119,29 @@
         .kakao-icon {
             width: 24px;
             height: 24px;
+        }
+
+        .naver-map-button {
+            width: 280px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #2db400;
+            /* 네이버 초록색 */
+            color: #ffffff;
+            border: none;
+            border-radius: 40px;
+            padding: 14px 22px;
+            font-size: 16px;
+            font-family: 'Pretendard', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.15s ease-in-out;
+        }
+
+        .naver-map-button:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -167,6 +192,12 @@
             </div>
         </details>
     </div>
+
+    <button
+        href="https://map.naver.com/v5/search/https://map.naver.com/v5/search/%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%82%B0%EC%8B%9C%20%EB%8B%A8%EC%9B%90%EA%B5%AC%20%EC%B4%88%EC%A7%80%EB%8F%99%20%EC%9B%90%EC%B4%88%EB%A1%9C%2090"
+        target="_blank" rel="noopener noreferrer" class="naver-map-button">
+        📍 네이버 지도로 보기
+    </button>
 
     <!-- HTML 버튼 -->
     <div class="kakao-share-wrapper">
