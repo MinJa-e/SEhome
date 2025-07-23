@@ -121,6 +121,12 @@
             height: 24px;
         }
 
+        .naver-share-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
         .naver-map-button {
             width: 280px;
             display: flex;
@@ -142,6 +148,11 @@
 
         .naver-map-button:hover {
             transform: scale(1.05);
+        }
+
+        .naver-icon {
+            width: 24px;
+            height: 24px;
         }
     </style>
 </head>
@@ -193,11 +204,14 @@
         </details>
     </div>
 
-    <button
-        href="https://map.naver.com/v5/search/https://map.naver.com/v5/search/%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%82%B0%EC%8B%9C%20%EB%8B%A8%EC%9B%90%EA%B5%AC%20%EC%B4%88%EC%A7%80%EB%8F%99%20%EC%9B%90%EC%B4%88%EB%A1%9C%2090"
-        target="_blank" rel="noopener noreferrer" class="naver-map-button">
-        📍 네이버 지도로 보기
-    </button>
+    <div class="naver-share-wrapper">
+        <button
+            href="https://map.naver.com/v5/search/https://map.naver.com/v5/search/%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%82%B0%EC%8B%9C%20%EB%8B%A8%EC%9B%90%EA%B5%AC%20%EC%B4%88%EC%A7%80%EB%8F%99%20%EC%9B%90%EC%B4%88%EB%A1%9C%2090"
+            target="_blank" rel="noopener noreferrer" class="naver-map-button">
+            <img src="images\Naver_logo.jpg" alt="네이버 아이콘" class="naver-icon" />
+            네이버 지도로 길 찾기
+        </button>
+    </div>
 
     <!-- HTML 버튼 -->
     <div class="kakao-share-wrapper">
